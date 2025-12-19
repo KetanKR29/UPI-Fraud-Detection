@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UPI Fraud Detection</title>
+
+    <!-- ✅ CORRECT WAY TO LINK CSS IN FLASK -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<div class="container">
+    <h1>UPI Fraud Detection</h1>
+
+    <form action="/predict" method="post">
+        <input type="number" name="trans_hour" placeholder="Transaction Hour" required>
+        <input type="number" name="trans_day" placeholder="Transaction Day" required>
+        <input type="number" name="trans_month" placeholder="Transaction Month" required>
+        <input type="number" name="trans_year" placeholder="Transaction Year" required>
+        <input type="number" name="category" placeholder="Category" required>
+        <input type="number" name="upi_number" placeholder="UPI Number" required>
+        <input type="number" name="age" placeholder="Age" required>
+        <input type="number" step="0.01" name="trans_amount" placeholder="Transaction Amount" required>
+        <input type="number" name="state" placeholder="State Code" required>
+        <input type="number" name="zip" placeholder="ZIP Code" required>
+
+        <button type="submit">Check Fraud</button>
+    </form>
+
+</div>
+
+</body>
+</html>
